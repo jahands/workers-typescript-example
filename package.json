@@ -29,11 +29,16 @@
     "watch": "npm run build -- --watch",
     "watch:test": "jest --watch"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@types/node-fetch": "^2.1.2",
+    "node-fetch": "^2.2.1"
+  },
   "devDependencies": {
     "@types/jest": "^23.3.9",
     "@types/node": "^10.11.4",
     "coveralls": "^3.0.2",
+    "grunt": "^1.0.3",
+    "grunt-replace": "^1.0.1",
     "jest": "^23.6.0",
     "prettier": "^1.14.3",
     "rimraf": "^2.6.2",
@@ -50,7 +55,7 @@
     "transform": {
       ".(ts)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|js)$",
+    "testRegex": "(/__tests__/.*)\\-spec.ts$",
     "moduleFileExtensions": [
       "ts",
       "js"
