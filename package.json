@@ -23,7 +23,7 @@
     "lint": "tslint --force --format verbose \"src/**/*.ts\"",
     "prepublishOnly": "npm run build",
     "prebuild": "npm run clean && npm run format && npm run lint && echo Using TypeScript && tsc --version",
-    "build": "tsc --pretty",
+    "build": "grunt prepare-typescript && tsc build/*.ts --pretty --skipLibCheck; grunt fix-export",
     "test": "jest",
     "coverage": "jest --coverage",
     "watch": "npm run build -- --watch",

@@ -18,6 +18,6 @@ import { Request, Response } from 'node-fetch';
 
 export class Worker {
   public handle(request: Request) {
-    return new Response("Hello, world!")
+    return new Response('Hello, world!');
   }
 }
